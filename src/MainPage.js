@@ -1,17 +1,15 @@
 import React from 'react'
 import VideoInput from './VideoInput'
 
-const MainPage = () => {
+const MainPage = ({source}) => {
   return (
-    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg p-5 flex items-center space-x-4">
-  <div class="shrink-0">
-    {/* <img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo"> */}
-  </div>
-  <div>
+    <div class= " min-w-sm mx-auto bg-white rounded-xl shadow-lg p-5 flex flex-col items-center space-x-4">
+  
     <div class="text-xl font-medium text-black">Output</div>
+    <video source={source}></video>
    
     
-  </div>
+  
 </div>
   )
 }

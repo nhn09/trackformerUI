@@ -15,7 +15,7 @@ const MainPagebg = () => {
   <VideoInput width={500} height={300} />
   </div>
    
- <MainPage/>
+ {/* <MainPage/> */}
     
    
     </div>

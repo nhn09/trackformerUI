@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from 'axios';
+import MainPage from "./MainPage";
 
 export default function VideoInput({ width, height }) {
   
@@ -35,7 +36,7 @@ export default function VideoInput({ width, height }) {
   };
 
   return (
-    <div className="VideoInput rounded-l  m-5  items-center max-w-sm ">
+    <div className="VideoInput rounded-l  m-5  items-center max-w-md ">
       <input
         ref={inputRef}
         className="VideoInput_input"
@@ -55,6 +56,8 @@ export default function VideoInput({ width, height }) {
         />
       )}
       <div className="VideoInput_footer">{source || "Nothing selectd"}</div>
+
+      {source && <MainPage source={source}/> }
     </div>
   );
 }
