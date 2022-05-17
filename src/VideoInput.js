@@ -16,6 +16,7 @@ export default function VideoInput({ width, height }) {
     event.preventDefault()
     const file = event.target.files[0];
     setInput(file)
+
     axios.post('http://1e1f-34-68-190-22.ngrok.io/predict', {
       "file": input
     })
@@ -23,7 +24,7 @@ export default function VideoInput({ width, height }) {
     .catch((error)=>{console.log(error);
     });
 
-    const url = URL.createObjectURL(file);
+    const url = URL.createObjectURL(file);// response ashle set sourse e response set kore dibo to show 
     
     
     setSource(url);
